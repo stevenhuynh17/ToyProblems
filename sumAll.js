@@ -1,4 +1,3 @@
-
 function sumAll(arr) {
   if(arr.length > 2) {
     return 0; 
@@ -15,4 +14,4 @@ function sumAll(arr) {
   
 }
 
-sumAll([1, 4]);
+console.log(sumAll([1, 4]));
