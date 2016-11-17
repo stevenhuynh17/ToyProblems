@@ -18,3 +18,16 @@ def censor(text, word):
     
 
 print censor("TESTING HI HI HI", "HI")
+
+###################################################################
+
+def anti_vowel(text):
+    result = ""
+    
+    for letter in text:
+        if letter not in "aeiouAEIOU":
+            result += letter
+    return result
+            
+
+print anti_vowel("Hey You!")
