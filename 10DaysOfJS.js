@@ -82,3 +82,53 @@ function getLetter(s) {
     return letter;
 }
     
+/*
+ * Implement a Polygon class with the following properties:
+ * 1. A constructor that takes an array of integer side lengths.
+ * 2. A 'perimeter' method that returns the sum of the Polygon's side lengths.
+ */
+
+    
+// DAY 4
+class Polygon {
+    constructor(array) {
+        this.sides = array
+    }
+    
+    perimeter() {
+        return this.sides.reduce((total, currentValue) => {
+            return total + currentValue
+        })
+        
+    }
+}
+    
+/*
+ * Return a count of the total number of objects 'o' satisfying o.x == o.y.
+ * 
+ * Parameter(s):
+ * objects: an array of objects with integer properties 'x' and 'y'
+ */
+function getCount(objects) {
+    let count = 0
+    for(let key in objects) {
+        // console.log(objects[key])
+        if(objects[key].x === objects[key].y) {
+            count++
+        }
+    }
+    return count
+}
+    
+/*
+ * Complete the Rectangle function
+ */
+function Rectangle(a, b) {
+    return {
+        length: a,
+        width: b,
+        perimeter: 2 * (a + b),
+        area: a * b
+    }
+}
+    
