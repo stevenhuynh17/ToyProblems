@@ -1,31 +1,31 @@
 class Solution {
     public int[] sortArrayByParity(int[] A) {
-        // Initialize arraylist for dynamic use
-        ArrayList even = new ArrayList();
-        ArrayList odd = new ArrayList();
+        // Initialize arrays
+        int[] solution = new int[A.length];
+        int[] odd = new int[A.length]; 
         
+        // Keep track of current position of next available index
+        int current_pos = 0;
         
-        // Differentiate between odd and even values
+        // Put all the evens and odds in their respective arrays
         for(int i=0; i<A.length; i++) {
-            int current = A[i];
-            if(current % 2 == 0) {
-                even.add(current);
-            } else {
-                odd.add(current);
+            int current_val = A[i];
+            
+            if(current_val % 2 == 0) {
+                solution[current_pos] = current_val;
+                current_pos++;
             }
         }
         
-        // Add all odd values to the even 
-        for(int i=0; i<odd.size(); i++) {
-            even.add(odd.get(i));
+        // Add all odd values to the even
+        for(int i=0; i<A.length; i++) {
+            int current_val = A[i];
+            
+            if(current_val % 2 != 0) {
+                solution[current_pos] = current_val;
+                current_pos++;
+            }
         }
-        
-        // Convert ArrayList into array to have proper return type
-        int[] answer = new int[even.size()];
-        for(int i=0; i<answer.length; i++) {
-            answer[i] = (int) even.get(i);
-        }
-        
-        return answer;
+        return solution;
     }
 }
