@@ -6,7 +6,6 @@ class Solution {
         // Go through each direction
         for(int i=0; i<moves.length(); i++){
             char current = moves.charAt(i);
-            System.out.println(current);
             
             // Add appropriate position value
             switch(current){
