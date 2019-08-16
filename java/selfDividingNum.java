@@ -1,12 +1,10 @@
 class Solution {
     public List<Integer> selfDividingNumbers(int left, int right) {
-        List result = new ArrayList();
+        LinkedList result = new LinkedList();
         
-        for(int i=left; i<right; i++) {
-           
-        }
-        
-        System.out.println(1 % 10);
+        // Loop through from lower bound to higher bound
+        // For each digit of the int, see if it is divisible to the whole int
+        // If all are divisible, add to result linkedlist
         
         return result;
     }
